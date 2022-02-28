@@ -22,10 +22,16 @@
             aria-label="Recipient's username" aria-describedby="button-addon2">
         <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="searchPhone()">Search</button>
     </div>
+    <!-- loading spinner -->
+    <div id="spinner" class="spinner-border mx-auto my-5" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
     <!-- display details -->
     <div id="details-container" class="card mx-auto" style="width: 18rem;">
     </div>
     <!-- display result -->
+    <div id="phone-quantity" class="mx-auto w-25">
+    </div>
     <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4 mx-auto w-75 my-4">
     </div>
     <!-- bootstrap js -->

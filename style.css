@@ -9,3 +9,12 @@
     background-color: lightpink;
     color: white;
 }
+#spinner{
+    display: none;
+}
+#no-result{
+    background-color: lightpink;
+}
+#phone-quantity{
+    background-color: lightpink;
+}
