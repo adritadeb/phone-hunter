@@ -92,7 +92,7 @@ const displayDetails = phoneDetails => {
     </div>`;
     // part 2
     if (!phoneDetails.releaseDate) {
-        div2.innerHTML = `<h5 class="ms-3">Release date: No release date found</h5>`;
+        div2.innerHTML = `<h5 class="ms-3">Release date: Comming soon</h5>`;
     }
     else {
         div2.innerHTML = `<h5 class="ms-3">Release date: ${phoneDetails.releaseDate}</h5>`;
@@ -100,11 +100,11 @@ const displayDetails = phoneDetails => {
     // part 3
     div3.innerHTML = ` <h5 class="ms-3">Main features:</h5>
     <ul class="card-title">
-        <li>Storage: ${phoneDetails.mainFeatures.storage}</li>
-        <li>Display size: ${phoneDetails.mainFeatures.displaySize}</li>
-        <li>ChipSet: ${phoneDetails.mainFeatures.chipSet}</li>
-        <li>Memory: ${phoneDetails.mainFeatures.memory}</li>
-        <li>Sensors: ${phoneDetails.mainFeatures.sensors}</li>
+        <li><b>Storage</b>: ${phoneDetails.mainFeatures.storage}</li>
+        <li><b>Display size</b>: ${phoneDetails.mainFeatures.displaySize}</li>
+        <li><b>ChipSet</b>: ${phoneDetails.mainFeatures.chipSet}</li>
+        <li><b>Memory</b>: ${phoneDetails.mainFeatures.memory}</li>
+        <li><b>Sensors</b>: ${phoneDetails.mainFeatures.sensors}</li>
     </ul>`;
     div.appendChild(div1);
     div.appendChild(div2);
@@ -113,12 +113,12 @@ const displayDetails = phoneDetails => {
     if (phoneDetails.others) {
         div4.innerHTML = `<h5 class="ms-3">Others:</h5>
     <ul class="card-title">
-        <li>WLAN: ${phoneDetails.others.WLAN}</li>
-        <li>Bluetooth: ${phoneDetails.others.Bluetooth}</li>
-        <li>GPS: ${phoneDetails.others.GPS}</li>
-        <li>NFC: ${phoneDetails.others.NFC}</li>
-        <li>Radio: ${phoneDetails.others.Radio}</li>
-        <li>USB: ${phoneDetails.others.USB}</li>
+        <li><b>WLAN</b>: ${phoneDetails.others.WLAN}</li>
+        <li><b>Bluetooth</b>: ${phoneDetails.others.Bluetooth}</li>
+        <li><b>GPS</b>: ${phoneDetails.others.GPS}</li>
+        <li><b>NFC</b>: ${phoneDetails.others.NFC}</li>
+        <li><b>Radio</b>: ${phoneDetails.others.Radio}</li>
+        <li><b>USB</b>: ${phoneDetails.others.USB}</li>
     </ul>`;
         div.appendChild(div4);
     }
