@@ -1,7 +1,5 @@
 // search phone
 const searchPhone = () => {
-    document.getElementById('spinner').style.display = 'block';
-
     const searchText = document.getElementById('search-field').value.toLowerCase();
     document.getElementById('search-field').value = '';
 
@@ -9,6 +7,9 @@ const searchPhone = () => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayPhone(data.data));
+
+
+    // document.getElementById('spinner').style.display = 'block';
 };
 // show search results
 const displayPhone = phones => {
@@ -18,10 +19,10 @@ const displayPhone = phones => {
     const phoneQuantity = document.getElementById('phone-quantity');
     phoneQuantity.textContent = '';
     const quantityDiv = document.createElement('div');
-    quantityDiv.innerHTML = `<h4 id="phone-quantity" class="text-white text-center">There are ${phones.length} results for you</h4>`;
+    quantityDiv.innerHTML = `<h4 id="phone-quantity" class="text-white text-center p-sm-1 p-md-3">${phones.length} results for you</h4>`;
     phoneQuantity.appendChild(quantityDiv);
 
-    if (phones.length == 0) {
+    if (phones.length === 0) {
         phoneQuantity.style.display = 'none';
 
         phoneContainer.innerHTML = `<h3 id="no-result" class="mx-auto py-4 text-center text-white rounded">No result found</h3>`;
@@ -44,7 +45,7 @@ const displayPhone = phones => {
             phoneContainer.appendChild(div);
         });
     }
-    document.getElementById('spinner').style.display = 'none';
+    // document.getElementById('spinner').style.display = 'none';
 };
 // load phone details
 const loadDetails = phoneInfo => {
@@ -55,7 +56,6 @@ const loadDetails = phoneInfo => {
 };
 // show phone details
 const displayDetails = phoneDetails => {
-    console.log(phoneDetails)
     const detailsContainer = document.getElementById('details-container');
     detailsContainer.textContent = '';
     const div = document.createElement('div');
