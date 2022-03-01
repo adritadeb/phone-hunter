@@ -56,12 +56,14 @@ const loadDetails = phoneInfo => {
 };
 // show phone details
 const displayDetails = phoneDetails => {
+    console.log(phoneDetails);
     const detailsContainer = document.getElementById('details-container');
     detailsContainer.textContent = '';
     const div = document.createElement('div');
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
     const div3 = document.createElement('div');
+    const div4 = document.createElement('div');
     div1.innerHTML = `<img src="${phoneDetails.image}" class="card-img-top w-50 mt-2 ms-2" alt="...">
     <div class="ms-3 mt-2">
         <h5 class="card-title">Name: ${phoneDetails.name}</h5>
@@ -78,9 +80,22 @@ const displayDetails = phoneDetails => {
         <li>Display size: ${phoneDetails.mainFeatures.displaySize}</li>
         <li>ChipSet: ${phoneDetails.mainFeatures.chipSet}</li>
         <li>Memory: ${phoneDetails.mainFeatures.memory}</li>
+        <li>Sensors: ${phoneDetails.mainFeatures.sensors}</li>
     </ul>`;
     div.appendChild(div1);
     div.appendChild(div2);
     div.appendChild(div3);
+    if (phoneDetails.others) {
+        div4.innerHTML = `<h5 class="ms-3">Others:</h5>
+    <ul class="card-title">
+        <li>WLAN: ${phoneDetails.others.WLAN}</li>
+        <li>Bluetooth: ${phoneDetails.others.Bluetooth}</li>
+        <li>GPS: ${phoneDetails.others.GPS}</li>
+        <li>NFC: ${phoneDetails.others.NFC}</li>
+        <li>Radio: ${phoneDetails.others.Radio}</li>
+        <li>USB: ${phoneDetails.others.USB}</li>
+    </ul>`;
+        div.appendChild(div4);
+    }
     detailsContainer.appendChild(div);
 };
