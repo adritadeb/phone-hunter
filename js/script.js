@@ -50,13 +50,6 @@ const displayPhone = phones => {
         phoneQuantity.style.display = 'block';
         const twentyResults = phones.slice(0, 20);
         showCard(twentyResults);
-        // show all results
-        // const showAllResults = () => {
-        //     const restResults = phones.slice(20, phones.length);
-        //     common(restResults);
-        // };
-        // const showButton = document.getElementById('show-btn');
-        // showButton.style.display = 'block';
     }
     else {
         phoneQuantity.style.display = 'block';
@@ -65,7 +58,6 @@ const displayPhone = phones => {
     // loading spinner
     document.getElementById('spinner').style.display = 'none';
 };
-
 // load phone details
 const loadDetails = phoneInfo => {
     // loading spinner
@@ -98,7 +90,7 @@ const displayDetails = phoneDetails => {
         div2.innerHTML = `<h5 class="ms-3">Release date: ${phoneDetails.releaseDate}</h5>`;
     }
     // part 3
-    div3.innerHTML = ` <h5 class="ms-3">Main features:</h5>
+    div3.innerHTML = `<h5 class="ms-3">Main features:</h5>
     <ul class="card-title">
         <li><b>Storage</b>: ${phoneDetails.mainFeatures.storage}</li>
         <li><b>Display size</b>: ${phoneDetails.mainFeatures.displaySize}</li>
